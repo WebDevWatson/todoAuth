@@ -32,5 +32,6 @@
   "bugs": {
     "url": "https://github.com/April-Yuen/todoAuth/issues"
   },
-  "homepage": "https://github.com/April-Yuen/todoAuth#readme"
+  "homepage": "https://github.com/April-Yuen/todoAuth#readme",
+  "devDependencies": {}
 }

@@ -7,11 +7,13 @@ const mongoose = require('mongoose')
 //   password: String
 // })
 const UserSchema = new mongoose.Schema({
+  // firstName: { type: String, unique: true },
+  // lastName: { type: String, unique: true },
   userName: { type: String, unique: true },
   email: { type: String, unique: true },
   password: String,
-  secQuestion: { type: String },
-  qAnswer: {type: String}
+  // secQuestion: { type: String },
+  // qAnswer: {type: String}
 })
 
 
