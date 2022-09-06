@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-
-    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
 </head>
 <body>
     <% if (locals.messages.errors) { %>
@@ -19,18 +17,12 @@
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <div class="wrapper fadeInDown">
-        <div id="formContent">
-            <a href="/login"><h2 class="active"> Sign In </h2></a>
-            <a href="/signup"><h2 class="inactive underlineHover">Sign Up </h2></a>
-            <form action="/login" method="POST">
-                <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email">
-                <input type="text" id="password" class="fadeIn third" name="login" placeholder="Password">
-                <input type="submit" class="fadeIn fourth" value="Submit">
-            </form>
-            <a href="/signup">Forgot Password?</a>
-        </div>
-    </div>
-
+    <form action="/login" method="POST">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit">
+    </form>
+    <h3>New user?</h3>
+    <a href="/signup">Create account</a>
 </body>
 </html>
