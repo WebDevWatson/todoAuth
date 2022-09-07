@@ -9,16 +9,22 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<h1>Edit your tasks</h1>
-
-<form action="/todos/editTodo/<%=todoById._id%>" method="POST">
-    <div>
-        <label for="todo" class="form-label">Task</label>
-        <input type="text" name="todo" id="todo" value="<%=todoById.todo %>" class="form-control">
+<div class="wrapper fadeInDown">
+    <h1>Edit your tasks</h1>
+    
+    <div id="formContent2">
+        <form action="/todos/editTodo/<%=todoById._id%>" method="POST">
+            <div>
+                <!-- <label for="todo" class="form-label">Task</label> -->
+                <h2>Task</h2>
+                <input type="text" name="todo" id="todo" value="<%=todoById.todo %>" class="form-control">
+            </div>
+            <div>
+                <!-- <button type="submit">Edit Task</button> -->
+                <input type="submit" value="Edit Task">
+            </div>
+        </form>
     </div>
-    <div>
-        <button type="submit">Edit Task</button>
-    </div> 
-</form> 
+</div>
 </body>
 </html>

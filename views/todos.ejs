@@ -9,25 +9,26 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Todos</h1>
-    <ul>
-    <% todos.forEach( el => { %>
-            <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class="fa-solid fa-trash"></span>
-                <a href="/todos/editTodo/<%=el._id%>" class="text-success"><i class="fas fa-edit fa-lg mx-1"></i></a>
-            </li>
-    <% }) %>    
-    </ul>
-
-    <h2><%= user.userName %> has <%= left %> <%= left === 1 ? 'thing' : 'things' %> left to do.</h2>
-
-    <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-        <input type="submit">
-    </form>
-
-    <a href="/logout">Logout</a>
+    <div class="wrapper fadeInDown">
+        <h1>Todos</h1>
+        <div id="formContent2">
+            <ul>
+            <% todos.forEach( el => { %>
+                    <li class='todoItem' data-id='<%=el._id%>'>
+                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                        <span class="fa-solid fa-trash"></span>
+                        <a href="/todos/editTodo/<%=el._id%>" class="text-success"><i class="fas fa-edit fa-lg mx-1"></i></a>
+                    </li>
+            <% }) %>
+            </ul>
+            <h2><%= user.userName %> has <%= left %> <%= left === 1 ? 'thing' : 'things' %> left to do.</h2>
+            <form action="/todos/createTodo" method='POST'>
+                <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+                <input type="submit">
+            </form>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
