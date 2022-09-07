@@ -314,3 +314,8 @@ input[type=text]:placeholder {
 * {
   box-sizing: border-box;
 }
+
+.fa-trash {
+  cursor: pointer;
+  color: rgb(118, 118, 118);
+}
