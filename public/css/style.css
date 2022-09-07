@@ -315,7 +315,24 @@ input[type=text]:placeholder {
   box-sizing: border-box;
 }
 
+ul {
+  width: 90%;
+  text-align: left;
+  padding-bottom: 0.6rem;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr;
+  padding-bottom: 0.3rem;
+  list-style: none;
+}
+
 .fa-trash {
   cursor: pointer;
   color: rgb(118, 118, 118);
+}
+
+#block {
+  flex-basis: 100%;
 }
